@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-namespace fireworks_game
+namespace fireworks_game_shared
 {
     public class Game1 : Game
     {
