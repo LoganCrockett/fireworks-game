@@ -1,15 +1,18 @@
-﻿using Microsoft.Xna.Framework;
+﻿using fireworks_game_shared.lib.states;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
 namespace fireworks_game_shared
 {
-    public class Game1 : Game
+    public class FireworksGame : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
 
-        public Game1()
+        private StateMachine stateMachine;
+
+        public FireworksGame()
         {
             _graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -19,7 +22,8 @@ namespace fireworks_game_shared
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-
+            this.stateMachine = new StateMachine();
+            this.stateMachine.ChangeState(new BuildFireworkState(), null);
             base.Initialize();
         }
 
@@ -36,7 +40,7 @@ namespace fireworks_game_shared
                 Exit();
 
             // TODO: Add your update logic here
-
+            this.stateMachine.Update(gameTime);
             base.Update(gameTime);
         }
 
@@ -45,7 +49,7 @@ namespace fireworks_game_shared
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Add your drawing code here
-
+            this.stateMachine.Draw(gameTime);
             base.Draw(gameTime);
         }
     }

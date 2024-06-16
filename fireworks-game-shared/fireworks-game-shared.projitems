@@ -9,7 +9,10 @@
     <Import_RootNamespace>fireworks_game_shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)Game1.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FireworksGame.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib\states\BaseState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib\states\BuildFireworkState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)lib\states\StateMachine.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)Content\" />
@@ -18,4 +21,4 @@
     <MonoGameContentReference Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
     <None Include="$(MSBuildThisFileDirectory)Content\Content.mgcb" />
   </ItemGroup>
- </Project>
+</Project>

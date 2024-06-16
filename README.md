@@ -11,3 +11,5 @@ All commits will follow the [bluejava Commit Guide](https://github.com/bluejava/
 
 # References
 1. [https://www.ch.ic.ac.uk/local/projects/gondhia/composition.html](https://www.ch.ic.ac.uk/local/projects/gondhia/composition.html)
+2. BaseState: GD50 Match 3: Colton Ogden [cogden@cs50.harvard.edu](cogden@cs50.harvard.edu)
+3. StateMachine: GD50 Match 3: Colton Ogden [cogden@cs50.harvard.edu](cogden@cs50.harvard.edu)
